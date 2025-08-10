@@ -62,7 +62,10 @@ export const TaskSidebar: React.FC<TaskListProps> = ({
               tasks.map((task) => {
                 const isSelected = selectedTaskId === task.id;
                 return (
-                  <SidebarMenuItem key={task.id} className="list-none">
+                  <SidebarMenuItem
+                    key={task.id}
+                    className="list-none w-[310px]"
+                  >
                     <SidebarMenuButton
                       isActive={isSelected}
                       onClick={() => onSelectTask(task.id)}
