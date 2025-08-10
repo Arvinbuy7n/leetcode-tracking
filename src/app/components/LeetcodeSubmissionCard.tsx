@@ -96,7 +96,7 @@ export const LeetcodeSubmissionCard: React.FC<LeetCodeSubmissionCardType> = ({
           onClick={() => window.location.reload()}
         >
           <ListRestart />
-          Reset
+          Reload
         </Button>
       </div>
 
