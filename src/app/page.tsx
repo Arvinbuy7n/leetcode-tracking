@@ -69,7 +69,7 @@ export default function HomePage() {
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mr-2 h-4" />
             <div className="flex items-center justify-between w-full">
-              <p>LeetCode Progress Tracker</p>
+              <p className="text-xl font-bold">LeetCode Progress Tracker</p>
               <CreateUserDialog />
             </div>
           </header>

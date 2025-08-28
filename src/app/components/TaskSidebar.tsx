@@ -75,9 +75,9 @@ export const TaskSidebar: React.FC<TaskListProps> = ({
                             : "bg-white border-gray-200 hover:border-gray-300"
                         )}
                       >
-                        <h3 className="font-medium text-gray-900 dark:text-white">
+                        <p className="font-medium text-gray-900 dark:text-white text-md">
                           {task.name}
-                        </h3>
+                        </p>
                         <div className="flex flex-wrap gap-2 mt-1">
                           {task.taskSlugs.map((slug) => (
                             <Badge

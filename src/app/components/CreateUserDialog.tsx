@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Plus } from "lucide-react";
+import { ListRestart, Plus, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -15,6 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import { Label } from "@/components/ui/label";
+import Link from "next/link";
 
 export const CreateUserDialog = () => {
   const [open, setOpen] = useState(false);
@@ -56,12 +57,35 @@ export const CreateUserDialog = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button size="sm" aria-label="Add new LeetCode user">
-          <Plus className="size-4" />
-          New user
+      <div className="space-x-3">
+        {/* <Link href="/ranking">
+          <Button
+            variant="outline"
+            size="sm"
+            className="shadow-sm hover:shadow-md transition-shadow bg-transparent"
+          >
+            <Trophy className="h-4 w-4 mr-2" />
+            View Ranking
+          </Button>
+        </Link> */}
+
+        <Button
+          variant={"ghost"}
+          className="border-2"
+          onClick={() => window.location.reload()}
+        >
+          <ListRestart />
+          Reload
         </Button>
-      </DialogTrigger>
+
+        <DialogTrigger asChild>
+          <Button size="sm" aria-label="Add new LeetCode user">
+            <Plus className="size-4" />
+            New user
+          </Button>
+        </DialogTrigger>
+      </div>
+
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Add Leetcode User</DialogTitle>
